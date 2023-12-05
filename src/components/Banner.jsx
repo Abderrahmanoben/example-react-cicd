@@ -15,7 +15,7 @@ export const Banner = () => {
     return (
         <section className="banner">
             <div className="inner">
-                <h1>THIS IS GEODISCOVER</h1>
+                <h1>THIS IS not GEODISCOVER</h1>
                 <p>
                     Discover the world like never before with GeoDiscover! Our intuitive web app provides detailed insights and captivating
                     images of countries worldwide, all at your fingertips. Unravel the hidden gems, explore diverse cultures, 
