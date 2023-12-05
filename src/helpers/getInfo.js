@@ -7,5 +7,5 @@ const getInfo = (object) => {
         return 'none'
     }
 }
-
+//adding a comment
 module.exports = getInfo;
