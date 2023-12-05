@@ -1,5 +1,5 @@
 
-export const getInfo = (object) => {
+const getInfo = (object) => {
     if (object) {
         return Object.values(object)
         .map(e => e.name ? e.name : e).join(', ')
@@ -7,3 +7,5 @@ export const getInfo = (object) => {
         return 'none'
     }
 }
+
+module.exports = getInfo;

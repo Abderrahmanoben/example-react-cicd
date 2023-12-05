@@ -13,8 +13,11 @@ import { Search } from '../../src/components/Search';
 //Start here: https://testing-library.com/docs/example-findByText
 //Look for the line that says: 'describe('findByText Examples', () => {'
 
-test('REPLACE_ME', async () => {
-    expect("REPLACE_ME").toBe("REPLACE_ME");
+test('checks if the .search field has some text typed in', async () => {
+    render(<Search />)
+    const searchBar = screen.getByRole('textbox')
+    fireEvent.change(searchBar, {target: {value: 'Spain'}})
+    expect(searchBar.value).toBe("Spain");
 });
 
 //TODO: write a snapshot test that captures the Search.js component
@@ -22,7 +25,10 @@ test('REPLACE_ME', async () => {
 //Look at this doc to help you write the test: https://jestjs.io/docs/snapshot-testing
 
 test('Search box renders correctly', () => {
-    expect("REPLACE_ME").toBe("REPLACE_ME");
+    const tree = renderer
+    .create(<Search />)
+    .toJSON()
+    expect(tree).toMatchSnapshot()
 });
 
 
